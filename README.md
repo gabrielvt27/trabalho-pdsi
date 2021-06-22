@@ -1,4 +1,4 @@
-#Trabalho de PDSI - UFU
+# **Trabalho de PDSI - UFU**
 
 Projeto implementado em Java utilizando o framework Spring para o backend e Dart/Flutter para a aplicação mobile. O banco de dados utilizado foi o MySql.
 
