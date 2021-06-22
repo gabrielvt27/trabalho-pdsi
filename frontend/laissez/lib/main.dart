@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:laissez/constants.dart';
-import 'package:laissez/screens/home/final_screen.dart';
-import 'package:laissez/screens/home/home-screen.dart';
 import 'package:laissez/screens/home/ini.dart';
 
 void main() {
