@@ -38,7 +38,7 @@ public class ProdutoController {
 	}
 	
 	@PostMapping("/novo/{idsupermercado}")
-	public ResponseEntity<?> createPessoa(@RequestBody Produto p, @PathVariable("idsupermercado") Long idsupermercado) {
+	public ResponseEntity<?> createProduto(@RequestBody Produto p, @PathVariable("idsupermercado") Long idsupermercado) {
 		Supermercado s = serviceSupermercado.findById(idsupermercado);
 		p.setSupermercado(s);
 		if(s == null) {
