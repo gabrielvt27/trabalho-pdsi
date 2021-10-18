@@ -23,14 +23,6 @@ public class Carrinho {
 	@Column(columnDefinition="Decimal(10,2) default '0.00'")
 	private double valor;
 
-	public Long getIdcarrinho() {
-		return id;
-	}
-
-	public void setIdcarrinho(Long idcarrinho) {
-		this.id = idcarrinho;
-	}
-
 	public Usuario getUsuario() {
 		return usuario;
 	}

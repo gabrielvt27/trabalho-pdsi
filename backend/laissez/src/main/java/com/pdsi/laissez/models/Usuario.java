@@ -39,6 +39,28 @@ public class Usuario {
 	@Column
 	private String endereco;
 	
+	@Column
+	private String senha;
+	
+	@Column
+	private String plano;
+	
+	public String getPlano() {
+		return plano;
+	}
+
+	public void setPlano(String plano) {
+		this.plano = plano;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 	@JsonManagedReference
 	@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "carrinho_idusuario", referencedColumnName = "id")
