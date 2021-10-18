@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:laissez/screens/home/cad_cliente.dart';
+import 'package:laissez/screens/home/choose_usuario.dart';
 import 'package:laissez/screens/home/home-screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Ini extends StatelessWidget {
   const Ini({Key key}) : super(key: key);
@@ -44,11 +47,22 @@ class Ini extends StatelessWidget {
               width: double.infinity,
               height: 60,
               child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
-                  );
+                onPressed: () async {
+                  SharedPreferences prefs =
+                      await SharedPreferences.getInstance();
+                  bool logado = prefs.getBool('logado') ?? false;
+                  print(logado);
+                  if (!logado) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ChooseUser()),
+                    );
+                  } else {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                    );
+                  }
                 },
                 child: Text(
                   "Começar",

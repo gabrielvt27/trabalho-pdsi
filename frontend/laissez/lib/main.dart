@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:laissez/constants.dart';
 import 'package:laissez/screens/home/ini.dart';
 
-void main() {
+void main() async {
   runApp(MyApp());
 }
 

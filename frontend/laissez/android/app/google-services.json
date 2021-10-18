@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "540394958430",
+    "project_id": "laissez-fd508",
+    "storage_bucket": "laissez-fd508.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540394958430:android:b6e478ef4abac2f3810ecf",
+        "android_client_info": {
+          "package_name": "com.example.laissez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540394958430-6hqgbcbuqvam7l0ns8kqg1bp33rujj5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXGU_ZJ5upkNaei4UJqm0z2xB0rdJRgXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540394958430-6hqgbcbuqvam7l0ns8kqg1bp33rujj5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

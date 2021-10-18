@@ -32,6 +32,25 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              Center(
+                child: Image(
+                  image: AssetImage("assets/icons/hat.png"),
+                  width: 70,
+                  height: 70,
+                ),
+              ),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(
+                    "Uberlândia, MG",
+                    style: TextStyle(
+                        color: Colors.grey[900],
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
+                ),
+              ),
               SearchBox(
                 onChanged: (value) {
                   if (value.isEmpty) {

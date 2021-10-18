@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:laissez/screens/home/home-screen.dart';
 import 'package:laissez/screens/home/ini.dart';
+import 'package:laissez/screens/perfil/perfil.dart';
 import 'package:laissez/screens/shopping_cart/shopping_cart.dart';
 
 class BottomNavigation extends StatelessWidget {
@@ -55,7 +56,12 @@ class BottomNavigation extends StatelessWidget {
             icon: Icon(Icons.shopping_cart),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Perfil()),
+              );
+            },
             icon: Icon(Icons.person),
           ),
         ],
