@@ -42,6 +42,10 @@ public class CarrinhoController {
 		List<CarrinhoProduto> lcp = serviceCarrinhoProduto.findByIdCarrinho(idcarrinho); // lista de produtos no carrinho
 		Carrinho c = serviceCarrinho.findById(idcarrinho); // valor total carrinho
 		
+		if(c == null) {
+			return ResponseEntity.notFound().build();
+		}
+		
 		ObjectMapper mapper = new ObjectMapper();
 		ObjectNode rootNode = mapper.createObjectNode();
 		rootNode.put("total", c.getValor());

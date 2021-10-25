@@ -42,8 +42,8 @@ public class UsuarioController {
 	@PostMapping("/login")
 	public ResponseEntity<?> loginUsuario(@RequestBody Usuario u){
 		List<Usuario> user = serviceUsuario.login(u.getEnderecoemail(), u.getSenha());
-	
-		if(user == null) {
+		
+		if(user.isEmpty()) {
 			return new ResponseEntity<String>("{\"erro\":\"Credenciais Inválidas\"}",HttpStatus.NOT_FOUND);
 		}
 		

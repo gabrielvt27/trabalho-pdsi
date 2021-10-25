@@ -28,13 +28,19 @@ public class ProdutoController {
 	SupermercadoService serviceSupermercado;
 	
 	@GetMapping
-	public List<Produto> listaProdutos() {
-		return serviceProduto.listallproducts();
+	public ResponseEntity<?> listaProdutos() {
+		return new ResponseEntity<List<Produto>>(serviceProduto.listallproducts(), HttpStatus.OK);
 	}
 	
 	@GetMapping("/search/{nome}")
-	public List<Produto> buscarPorNome(@PathVariable("nome") String nome) {
-		return serviceProduto.searchproducts2(nome);
+	public ResponseEntity<?> buscarPorNome(@PathVariable("nome") String nome) {
+		List<Produto> produtos = serviceProduto.searchproducts2(nome);
+		
+		if(produtos.isEmpty()) {
+			return ResponseEntity.notFound().build();
+		}
+		
+		return new ResponseEntity<List<Produto>>(serviceProduto.searchproducts2(nome), HttpStatus.OK);
 	}
 	
 	@PostMapping("/novo/{idsupermercado}")
